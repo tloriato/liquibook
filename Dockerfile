@@ -13,7 +13,7 @@ RUN cd /root \
     && wget https://github.com/objectcomputing/quickfast/archive/V1_5.tar.gz \
     && tar -xvzf xerces-c-3.2.0.tar.gz && tar -xvzf boost_1_65_1.tar.gz && tar -xvzf ACE+TAO+CIAO-6_3_3.tar.gz && tar -xvzf V1_5.tar.gz && rm -rf *.tar.gz \
     && cd /root/xerces-c-3.2.0 && ./configure --prefix=/root/xerces-c-3.2.0 && make && make install && rm -rf `ls |egrep -v -w '(lib|include)'` \
-    && cd /root/boost_1_58_0 && ./bootstrap.sh --prefix=/root/boost_1_58_0 && ./b2 --layout=versioned && ./b2 install && rm -rf `ls |egrep -v -w '(lib|include)'`
+    && cd /root/boost_1_65_1 && ./bootstrap.sh --prefix=/root/boost_1_65_1 && ./b2 --layout=versioned && ./b2 install && rm -rf `ls |egrep -v -w '(lib|include)'`
 
 ENV QUICKFAST_ROOT      /root/quickfast-1_5
 ENV MPC_ROOT            /root/MPC-ACE-TAO-CIAO-6_3_3
